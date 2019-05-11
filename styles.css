@@ -1,0 +1,142 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+    padding: 10px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+h1 {
+    font-family: Georgia;
+    text-align: center;
+    line-height: 1.3em;
+}
+
+.article {
+    font-family: sans-serif;
+    line-height: 1.2em;
+}
+
+.byline {
+    text-transform: uppercase;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.income {
+    font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.flex-container {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.flex-item {
+    background-color: #A0CCA2;
+    padding: 15px;
+    margin-top: 5px;
+}
+
+th, td {
+    height: 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    font-family: helvetica;
+}
+
+td {
+    font-family: sans-serif;
+}
+
+.hp, .jh, .sh {
+    text-align: center;
+}
+
+.hp span, .jh span, .sh span {
+    display: none;
+}
+
+.hp.active span, .jh.active span, .sh.active span {
+    display: inline;
+}
+
+.hp_total, .jh_total, .sh_total, {
+    text-align: center;
+    font-weight: 800;
+}
+
+.total {
+    font-weight: 800;
+}
+
+#item_head {
+    text-align: left;
+}
+
+.restart-btn {
+    padding: 5px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    display: flex;
+}
+
+/* .fadein {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+} */
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+@media(min-width: 681px) {
+    /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+}
+
+.container {
+    max-width: 600px;
+}
+
+/*********************************************************************
+  YOUR DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+@media(min-width: 729px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 729px or larger -- so desktop */
+}
